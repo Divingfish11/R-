@@ -1,0 +1,33 @@
+#练习1
+x<-c(1:1000)#将1到1000的数字赋值给变量x
+y<-atan(1/x)#计算x的倒数的反正切值并赋值给变量y
+z<-1/tan(y)#计算y的切线的倒数并赋值给变量z
+#练习2
+x==z#判断X与z是否相等
+identical(x,z)#判断x与z是否相等
+all.equal(x,z)#判断x与z是否相等
+all.equal(x,z,rolerance=1)
+all.equal(x,z,rolerance=0)#设置参数为0
+#练习3
+true_and_missing<-c(TRUE,NA)#定义向量
+any(true_and_missing)#结果为TURE
+all(true_and_missing)#结果为NA
+false_and_missing<-c(FALSE,NA)#定义向量
+any(false_and_missing)#结果为NA
+all(false_and_missing)#结果为FALSE
+mixed<-c(TRUE,FALSE,NA)#定义向量
+any(mixed)#结果为TRUE
+all(mixed)#结果为FALSE
+#练习4 习题1
+a<-sample(50:1000,100)#从50到1000中抽取100个数并赋值给a
+b<-sum(a)#计算a的加和
+c<-median(a)#计算a的中位数
+d<-mean(a)#计算a的平均数
+e<-var(a)#计算a的方差
+#练习4 习题2
+r<-atan(1000)/2#计算半径r
+area<-pi*r*r#计算圆的面积
+#练习4 习题3
+sum1<-(13-2)^2#计算x坐标差的平方
+sum2<-(22-3)^2#计算y坐标差的平方
+metric<-sqrt(sum1+sum2)#计算欧式距离
